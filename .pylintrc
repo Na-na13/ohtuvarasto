@@ -44,6 +44,9 @@ suggestion-mode=yes
 # active Python interpreter and may run arbitrary code.
 unsafe-load-any-extension=no
 
+# Cyclomatic complexity
+load-plugins=pylint.extensions.mccabe --max-complexity=3
+
 
 [MESSAGES CONTROL]
 
@@ -107,7 +110,7 @@ score=yes
 [REFACTORING]
 
 # Maximum number of nested blocks for function / method body
-max-nested-blocks=3
+max-nested-blocks=2
 
 # Complete name of functions that never returns. When checking for
 # inconsistent-return-statements if a never returning function is called then
@@ -259,7 +262,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=80
 
 # Maximum number of lines in a module.
 max-module-lines=1000
@@ -507,7 +510,7 @@ max-public-methods=20
 max-returns=6
 
 # Maximum number of statements in function / method body.
-max-statements=20
+max-statements=15
 
 # Minimum number of public methods for a class (see R0903).
 min-public-methods=0
