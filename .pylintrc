@@ -31,7 +31,8 @@ limit-inference-results=100
 
 # List of plugins (as comma separated values of python module names) to load,
 # usually to register additional checkers.
-load-plugins=
+# Cyclomatic complexity
+load-plugins=pylint.extensions.mccabe --max-complexity=3
 
 # Pickle collected data for later comparisons.
 persistent=yes
@@ -43,9 +44,6 @@ suggestion-mode=yes
 # Allow loading of arbitrary C extensions. Extensions are imported into the
 # active Python interpreter and may run arbitrary code.
 unsafe-load-any-extension=no
-
-# Cyclomatic complexity
-load-plugins=pylint.extensions.mccabe --max-complexity=3
 
 
 [MESSAGES CONTROL]
